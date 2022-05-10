@@ -19,7 +19,14 @@ npm run dev
 ```
 npm install -D tailwindcss postcss autoprefixer
 npm install @tailwindcss/forms
+npm i tailwind-config-viewer -D
 npx tailwindcss init -p
+```
+
+```
+"scripts": {
+    "tailwind-config-viewer": "tailwind-config-viewer -o"
+}
 ```
 
 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
