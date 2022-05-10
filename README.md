@@ -18,6 +18,7 @@ npm run dev
 
 ```
 npm install -D tailwindcss postcss autoprefixer
+npm install @tailwindcss/forms
 npx tailwindcss init -p
 ```
 
@@ -27,7 +28,7 @@ npx tailwindcss init -p
 [Page](https://headlessui.dev/)
 
 ## Heroicons
-[Paage](https://heroicons.com/)
+[Page](https://heroicons.com/)
 
 ```
 npm install @headlessui/react @heroicons/react
