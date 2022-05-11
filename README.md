@@ -40,3 +40,24 @@ npx tailwindcss init -p
 ```
 npm install @headlessui/react @heroicons/react
 ```
+
+## Set Path
+
+tfconfig.json
+
+```
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ui": ["components/ui"],
+      "@ui/*": ["components/ui/*"],
+      "@_types/*": ["types/*"],
+    }
+  }
+```
+
+ex. import exsample.
+
+```
+import { NftMeta } from '@_types/nft'
+```
