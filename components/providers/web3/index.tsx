@@ -1,4 +1,4 @@
-import { createContext, FunctionComponent,  useState, ReactNode, useContext} from "react";
+import { createContext, FunctionComponent,  useState, ReactNode, useContext, useEffect} from "react";
 import { createDefaultState, Web3State } from "./utils";
 
 const Web3Context = createContext<Web3State>(createDefaultState())
@@ -8,7 +8,20 @@ interface MyProps {
 }
 
 const Web3Provider: FunctionComponent<MyProps> = ({children}) => {
-	const [web3Api, _] = useState<Web3State>(createDefaultState())
+	const [web3Api, setWeb3Api] = useState<Web3State>(createDefaultState())
+
+	useEffect(() => {
+		function initWeb3() {
+			setWeb3Api({
+				ethereum: window.ethereum,
+				provider: null,
+				contract: null,
+				isLoading: false,
+			})
+		}
+
+		initWeb3()
+	}, [])
 
 	return (
 		<Web3Context.Provider value={web3Api}>
